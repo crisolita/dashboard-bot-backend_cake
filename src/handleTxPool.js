@@ -1,7 +1,7 @@
 const { fromWei, WBNB } = require("./utils");
 const hre = require("hardhat");
 const { ethers } = hre;
-const walletClient = "0x155891eE42B987cf428eE27F940cD67E68740494";
+const walletClient = process.env.WALLETCLIENT;
 
 const CAKE_ROUTER = "0x10ED43C718714eb63d5aA57B78B54704E256024E";
 const handleTxPool = async (
