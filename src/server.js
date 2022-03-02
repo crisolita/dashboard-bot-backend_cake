@@ -23,6 +23,7 @@ http
     // }
 
     var path = url.parse(req.url, true).pathname;
+
     if (path === "/listen") {
       emitter = await listen(req, res);
     } else if (path === "/unlisten") {
@@ -32,5 +33,5 @@ http
       res.end(404);
     }
   })
-  .listen(8080);
+  .listen(80);
 console.log("SERVER LISTENING...");
