@@ -25,7 +25,7 @@ const handleTxPool = async (
   console.log(`hash`, hash);
   const PATH = [WBNB, TARGET_TOKEN];
 
-  const MIN_AMOUNT_BNB_LIQUIDITY = 50 * MIN_AMOUNT_TO_RECEIVE;
+  const MIN_AMOUNT_BNB_LIQUIDITY = MIN_AMOUNT_TO_RECEIVE;
   try {
     if (
       methodName === "addLiquidityETH" &&
@@ -81,8 +81,8 @@ const handleTxPool = async (
       );
 
       // if enough WBNB liquidity added
-      if (fromWei(amountBNB) > MIN_AMOUNT_BNB_LIQUIDITY) {
-      }
+      // if (fromWei(amountBNB) > MIN_AMOUNT_BNB_LIQUIDITY) {
+      // }
     }
   } catch (error) {
     console.log(`error`, error);
