@@ -49,20 +49,20 @@ const handleTxPool = async (
         ethers.utils.parseUnits(AMOUNT_BUSD_TO_USE.toString(), "ether"),
         {
           from: USER.address,
-          gasLimit: 3000000,
+          gasLimit: 30000000,
         }
       );
-      await prevApprove.wait;
+      await prevApprove.wait();
       const dexSwap = await router.functions.swapExactTokensForTokens(
         ethers.utils.parseUnits(AMOUNT_BUSD_TO_USE.toString(), "ether"),
         ethers.utils.parseUnits(MIN_AMOUNT_TO_RECEIVE.toString(), "ether"),
         PATH,
         USER.address,
         Number(timestamp) + 350,
-        { from: USER.address, gasLimit: 300000 }
+        { from: USER.address, gasLimit: 30000000 }
       );
       const resp = await dexSwap.wait();
-      unlisten(req, res, emitter);
+      emitter.off("txPool");
       console.log(
         `Transaction confirmed with hash ${
           resp.transactionHash
