@@ -16,7 +16,15 @@ const listen = async (req, res) => {
     console.log("TARGET TOKEN:", TARGET_TOKEN);
     const emitter = await setBlocknativeFilters(TARGET_TOKEN);
     emitter.on("txPool", (tx) =>
-      handleTxPool(tx, TARGET_TOKEN, MIN_AMOUNT_TO_RECEIVE, AMOUNT_BUSD_TO_USE)
+      handleTxPool(
+        tx,
+        TARGET_TOKEN,
+        MIN_AMOUNT_TO_RECEIVE,
+        AMOUNT_BUSD_TO_USE,
+        req,
+        res,
+        emitter
+      )
     );
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(

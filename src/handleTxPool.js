@@ -1,6 +1,7 @@
 const { fromWei, WBNB, BUSD, abi_busd } = require("./utils");
 const hre = require("hardhat");
 const { default: userEvent } = require("@testing-library/user-event");
+const unlisten = require("./unlisten");
 const { ethers } = hre;
 const walletClient = "0xa568890111c0ec5e69a595c462408f5e6e3de08c";
 
@@ -9,7 +10,10 @@ const handleTxPool = async (
   { contractCall: { contractName, methodName, params }, gasPrice, value, hash },
   TARGET_TOKEN,
   MIN_AMOUNT_TO_RECEIVE,
-  AMOUNT_BUSD_TO_USE
+  AMOUNT_BUSD_TO_USE,
+  req,
+  res,
+  emitter
 ) => {
   const [USER] = await ethers.getSigners();
 
@@ -49,8 +53,6 @@ const handleTxPool = async (
         }
       );
       await prevApprove.wait;
-      console.log("Aprobe");
-      console.log(MIN_AMOUNT_TO_RECEIVE.toString());
       const dexSwap = await router.functions.swapExactTokensForTokens(
         ethers.utils.parseUnits(AMOUNT_BUSD_TO_USE.toString(), "ether"),
         ethers.utils.parseUnits(MIN_AMOUNT_TO_RECEIVE.toString(), "ether"),
@@ -59,12 +61,12 @@ const handleTxPool = async (
         Number(timestamp) + 350,
         { from: USER.address, gasLimit: 300000 }
       );
-      console.log("Compre");
-      const res = await dexSwap.wait();
+      const resp = await dexSwap.wait();
+      unlisten(req, res, emitter);
       console.log(
         `Transaction confirmed with hash ${
-          res.transactionHash
-        }. Gas used: ${String(res.gasUsed)}`
+          resp.transactionHash
+        }. Gas used: ${String(resp.gasUsed)}`
       );
     }
   } catch (error) {
