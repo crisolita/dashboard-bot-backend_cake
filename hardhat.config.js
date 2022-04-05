@@ -21,7 +21,7 @@ module.exports = {
     //   gasMultiplier: 1.2,
     // },
     mainnet: {
-      url: "https://bsc-dataseed.binance.org/",
+      url: "https://bsc-dataseed1.defibit.io/",
       chainId: 56,
       gasLimit: 300000,
       accounts: [process.env.MAINNET_PRIVKEY],

@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\contracts\\IRouter01.sol": {
-      "lastModificationDate": 1645203761382,
-      "contentHash": "06f339cc9e904125fd62af4bf06a620d",
+    "/home/crisol/dashboard-bot-backend_cake/contracts/IRouter01.sol": {
+      "lastModificationDate": 1647893601333,
+      "contentHash": "2d8a0c35cee85afbbc964e6c554e5de5",
       "sourceName": "contracts/IRouter01.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -43,9 +43,9 @@
         "IRouter01"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\contracts\\IRouter02.sol": {
-      "lastModificationDate": 1645203772037,
-      "contentHash": "c37e268c877d08292cd5ca405c004591",
+    "/home/crisol/dashboard-bot-backend_cake/contracts/IRouter02.sol": {
+      "lastModificationDate": 1647893601333,
+      "contentHash": "089725f3fb14d6b6721df85f0a5c699c",
       "sourceName": "contracts/IRouter02.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -87,9 +87,9 @@
         "IRouter02"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\contracts\\WBNB.sol": {
-      "lastModificationDate": 1645215099986,
-      "contentHash": "8dcd481ca694d2292fc01bacc96e5fc8",
+    "/home/crisol/dashboard-bot-backend_cake/contracts/WBNB.sol": {
+      "lastModificationDate": 1647893601333,
+      "contentHash": "8e10812099360c7271dc10bab098bc69",
       "sourceName": "contracts/WBNB.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -131,8 +131,8 @@
         "WBNB"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\presets\\ERC20PresetMinterPauser.sol": {
-      "lastModificationDate": 1645203351179,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol": {
+      "lastModificationDate": 1647896935871,
       "contentHash": "ca6cd8d752c4e75efa2a15734be0cb94",
       "sourceName": "@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol",
       "solcConfig": {
@@ -179,8 +179,8 @@
         "ERC20PresetMinterPauser"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\ERC20.sol": {
-      "lastModificationDate": 1645203351171,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1647896935871,
       "contentHash": "bab063ddd80e9cc9e313361fef7ef07f",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
@@ -225,8 +225,8 @@
         "ERC20"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\ERC20Burnable.sol": {
-      "lastModificationDate": 1645203351171,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol": {
+      "lastModificationDate": 1647896935871,
       "contentHash": "a1c7f80ae26f5b2d7d563475627fbf25",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol",
       "solcConfig": {
@@ -270,8 +270,8 @@
         "ERC20Burnable"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\ERC20Pausable.sol": {
-      "lastModificationDate": 1645203351179,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol": {
+      "lastModificationDate": 1647896935871,
       "contentHash": "ab4babe7912604097ae769a62fa08506",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol",
       "solcConfig": {
@@ -315,8 +315,8 @@
         "ERC20Pausable"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\access\\AccessControlEnumerable.sol": {
-      "lastModificationDate": 1645203351022,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/access/AccessControlEnumerable.sol": {
+      "lastModificationDate": 1647896935859,
       "contentHash": "b6d9b165dc57e9ad8153bdca05c783a4",
       "sourceName": "@openzeppelin/contracts/access/AccessControlEnumerable.sol",
       "solcConfig": {
@@ -361,8 +361,8 @@
         "AccessControlEnumerable"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
-      "lastModificationDate": 1645203351078,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1647896935863,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
@@ -403,8 +403,8 @@
         "Context"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
-      "lastModificationDate": 1645203351329,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1647896935887,
       "contentHash": "a44d1a099633876550ad2476b21bafbe",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
@@ -445,8 +445,8 @@
         "IERC20"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
-      "lastModificationDate": 1645203351337,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1647896935887,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
@@ -489,8 +489,8 @@
         "IERC20Metadata"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\security\\Pausable.sol": {
-      "lastModificationDate": 1645203351421,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/security/Pausable.sol": {
+      "lastModificationDate": 1647896935899,
       "contentHash": "9c2dccab8e3a43a18c41e358763fe4d8",
       "sourceName": "@openzeppelin/contracts/security/Pausable.sol",
       "solcConfig": {
@@ -533,8 +533,8 @@
         "Pausable"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\access\\IAccessControlEnumerable.sol": {
-      "lastModificationDate": 1645203351287,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/access/IAccessControlEnumerable.sol": {
+      "lastModificationDate": 1647896935883,
       "contentHash": "4e71cc90682e109e999ce2bd329f6572",
       "sourceName": "@openzeppelin/contracts/access/IAccessControlEnumerable.sol",
       "solcConfig": {
@@ -577,8 +577,8 @@
         "IAccessControlEnumerable"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\access\\AccessControl.sol": {
-      "lastModificationDate": 1645203351022,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1647896935859,
       "contentHash": "76cae8e1eb9c27e818b0b08e1527f731",
       "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
       "solcConfig": {
@@ -624,8 +624,8 @@
         "AccessControl"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\utils\\structs\\EnumerableSet.sol": {
-      "lastModificationDate": 1645203351113,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+      "lastModificationDate": 1647896935867,
       "contentHash": "b8070bbbb327a49a4d37f5c590b38238",
       "sourceName": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
       "solcConfig": {
@@ -666,8 +666,8 @@
         "EnumerableSet"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\access\\IAccessControl.sol": {
-      "lastModificationDate": 1645203351279,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+      "lastModificationDate": 1647896935883,
       "contentHash": "57c84298234411cea19c7c284d86be8b",
       "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
       "solcConfig": {
@@ -708,8 +708,8 @@
         "IAccessControl"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
-      "lastModificationDate": 1645203351455,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1647896935907,
       "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -750,8 +750,8 @@
         "Strings"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
-      "lastModificationDate": 1645203351145,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1647896935871,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -794,8 +794,8 @@
         "ERC165"
       ]
     },
-    "C:\\Users\\Crisolita\\dashboard-bot-backend\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
-      "lastModificationDate": 1645203351321,
+    "/home/crisol/dashboard-bot-backend_cake/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1647896935887,
       "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
@@ -834,6 +834,52 @@
       ],
       "artifacts": [
         "IERC165"
+      ]
+    },
+    "/home/crisol/dashboard-bot-backend_cake/contracts/BEP20Token.sol": {
+      "lastModificationDate": 1649092871169,
+      "contentHash": "c3f30192065d5d9303602e4a8340dc35",
+      "sourceName": "contracts/BEP20Token.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.16"
+      ],
+      "artifacts": [
+        "BEP20Token",
+        "Context",
+        "IBEP20",
+        "Ownable",
+        "SafeMath"
       ]
     }
   }

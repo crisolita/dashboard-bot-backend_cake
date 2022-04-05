@@ -1,18 +1,24 @@
-const { fromWei, WBNB } = require("./utils");
+const { fromWei, WBNB, BUSD, abi_busd } = require("./utils");
 const hre = require("hardhat");
+const { default: userEvent } = require("@testing-library/user-event");
 const { ethers } = hre;
-const walletClient = process.env.WALLETCLIENT;
+const walletClient = "0xa568890111c0ec5e69a595c462408f5e6e3de08c";
 
 const CAKE_ROUTER = "0x10ED43C718714eb63d5aA57B78B54704E256024E";
 const handleTxPool = async (
   { contractCall: { contractName, methodName, params }, gasPrice, value, hash },
   TARGET_TOKEN,
   MIN_AMOUNT_TO_RECEIVE,
-  AMOUNT_BNB_TO_USE
+  AMOUNT_BUSD_TO_USE
 ) => {
   const [USER] = await ethers.getSigners();
 
   const router = await ethers.getContractAt("IRouter02", CAKE_ROUTER, USER);
+  const BUSD_CONTRACT = await ethers.getContractAt(
+    "BEP20Token",
+    "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+    USER
+  );
   const { timestamp } = await ethers.provider.getBlock();
 
   console.log("");
@@ -23,66 +29,43 @@ const handleTxPool = async (
   console.log(`params`, params);
   console.log(`gasPrice`, gasPrice * 1e-9);
   console.log(`hash`, hash);
-  const PATH = [WBNB, TARGET_TOKEN];
+  const PATH = [BUSD, TARGET_TOKEN];
 
-  const MIN_AMOUNT_BNB_LIQUIDITY = MIN_AMOUNT_TO_RECEIVE;
+  // const MIN_AMOUNT_BNB_LIQUIDITY = MIN_AMOUNT_TO_RECEIVE;
   try {
-    if (
-      methodName === "addLiquidityETH" &&
-      params.token.toUpperCase() === TARGET_TOKEN.toUpperCase()
-    ) {
-      // if enough BNB liquidity added
-      if (fromWei(value) > MIN_AMOUNT_BNB_LIQUIDITY) {
-      }
-      console.log("Found!", TARGET_TOKEN);
-      const tx = await router.swapExactETHForTokens(
-        ethers.utils.parseEther(MIN_AMOUNT_TO_RECEIVE.toString()).toString(),
-        PATH,
-        walletClient,
-        Number(timestamp) + 350,
-        {
-          value: ethers.utils
-            .parseEther(AMOUNT_BNB_TO_USE.toString())
-            .toString(),
-        }
-      );
-      const res = await tx.wait();
-      console.log(
-        `Transaction confirmed with hash ${
-          res.transactionHash
-        }. Gas used: ${String(res.gasUsed)}`
-      );
-    }
-
     if (
       methodName === "addLiquidity" &&
       (params.tokenA.toUpperCase() === TARGET_TOKEN.toUpperCase() ||
         params.tokenB.toUpperCase() === TARGET_TOKEN.toUpperCase())
     ) {
-      let amountBNB;
-      if (params.tokenA === WBNB) amountBNB = params.amountADesired;
-      else amountBNB = params.amountBDesired;
       console.log("Found!", TARGET_TOKEN);
 
-      const dexSwap = await router.swapExactETHForTokens(
-        ethers.utils.parseEther(MIN_AMOUNT_TO_RECEIVE.toString()).toString(),
-        PATH,
-        walletClient,
-        Number(timestamp) + 350,
+      const prevApprove = await BUSD_CONTRACT.functions.approve(
+        CAKE_ROUTER,
+        ethers.utils.parseUnits(AMOUNT_BUSD_TO_USE.toString(), "ether"),
         {
-          value: ethers.utils.parseEther(AMOUNT_BNB_TO_USE).toString(),
+          from: USER.address,
+          gasLimit: 3000000,
         }
       );
+      await prevApprove.wait;
+      console.log("Aprobe");
+      console.log(MIN_AMOUNT_TO_RECEIVE.toString());
+      const dexSwap = await router.functions.swapExactTokensForTokens(
+        ethers.utils.parseUnits(AMOUNT_BUSD_TO_USE.toString(), "ether"),
+        ethers.utils.parseUnits(MIN_AMOUNT_TO_RECEIVE.toString(), "ether"),
+        PATH,
+        USER.address,
+        Number(timestamp) + 350,
+        { from: USER.address, gasLimit: 300000 }
+      );
+      console.log("Compre");
       const res = await dexSwap.wait();
       console.log(
         `Transaction confirmed with hash ${
           res.transactionHash
         }. Gas used: ${String(res.gasUsed)}`
       );
-
-      // if enough WBNB liquidity added
-      // if (fromWei(amountBNB) > MIN_AMOUNT_BNB_LIQUIDITY) {
-      // }
     }
   } catch (error) {
     console.log(`error`, error);

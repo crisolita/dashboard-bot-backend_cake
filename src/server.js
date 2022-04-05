@@ -29,13 +29,6 @@ http
     } else if (path === "/unlisten") {
       console.log("ME DETUVE");
       unlisten(req, res, emitter);
-    } else if (path === "/close") {
-      res.writeHead(200, { "Content-Type": "application/json" });
-      res.end(
-        JSON.stringify({
-          data: "Me fui abruptamente",
-        })
-      );
     } else {
       res.end(404);
     }

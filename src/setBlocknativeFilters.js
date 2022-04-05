@@ -33,17 +33,11 @@ const setBlocknativeFilters = async (TARGET_TOKEN) => {
             {
               "contractCall.methodName": "addLiquidity",
             },
-            {
-              "contractCall.methodName": "addLiquidityETH",
-            },
           ],
         },
         {
           _join: "OR",
           terms: [
-            {
-              "contractCall.params.token": `${TARGET_TOKEN}`,
-            },
             {
               "contractCall.params.tokenA": `${TARGET_TOKEN}`,
             },

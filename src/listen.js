@@ -6,7 +6,7 @@ const hre = require("hardhat");
 const { ethers } = hre;
 
 const listen = async (req, res) => {
-  const { TARGET_TOKEN, MIN_AMOUNT_TO_RECEIVE, AMOUNT_BNB_TO_USE } = url.parse(
+  const { TARGET_TOKEN, MIN_AMOUNT_TO_RECEIVE, AMOUNT_BUSD_TO_USE } = url.parse(
     req.url,
     true
   ).query;
@@ -16,7 +16,7 @@ const listen = async (req, res) => {
     console.log("TARGET TOKEN:", TARGET_TOKEN);
     const emitter = await setBlocknativeFilters(TARGET_TOKEN);
     emitter.on("txPool", (tx) =>
-      handleTxPool(tx, TARGET_TOKEN, MIN_AMOUNT_TO_RECEIVE, AMOUNT_BNB_TO_USE)
+      handleTxPool(tx, TARGET_TOKEN, MIN_AMOUNT_TO_RECEIVE, AMOUNT_BUSD_TO_USE)
     );
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(
