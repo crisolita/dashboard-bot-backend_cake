@@ -1,6 +1,5 @@
 const { fromWei, WBNB, BUSD, abi_busd } = require("./utils");
 const hre = require("hardhat");
-const { default: userEvent } = require("@testing-library/user-event");
 const unlisten = require("./unlisten");
 const { ethers } = hre;
 const walletClient = "0xa568890111c0ec5e69a595c462408f5e6e3de08c";
