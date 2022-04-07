@@ -1,5 +1,6 @@
 const http = require("http");
 const listen = require("./listen.js");
+const listenBNB = require("./listenBNB");
 const url = require("url");
 const unlisten = require("./unlisten.js");
 const Web3Token = require("web3-token");

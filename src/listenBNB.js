@@ -1,4 +1,4 @@
-const handleTxPool = require("./handleTxPool");
+const handleTxPoolBNB = require("./handleTxPoolBNB");
 const setBlocknativeFiltersBNB = require("./setBlocknativeFiltersBNB");
 const url = require("url");
 

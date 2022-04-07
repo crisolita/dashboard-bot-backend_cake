@@ -33,7 +33,7 @@ const handleTxPoolBNB = async (
   console.log(`params`, params);
   console.log(`gasPrice`, gasPrice * 1e-9);
   console.log(`hash`, hash);
-  const PATH = [BUSD, TARGET_TOKEN];
+  const PATH = [WBNB, TARGET_TOKEN];
 
   // const MIN_AMOUNT_BNB_LIQUIDITY = MIN_AMOUNT_TO_RECEIVE;
   try {
@@ -50,7 +50,7 @@ const handleTxPoolBNB = async (
         Number(timestamp) + 350,
         {
           value: ethers.utils
-            .parseEther(AMOUNT_BNB_TO_USE.toString())
+            .parseEther(AMOUNT_BUSD_TO_USE.toString())
             .toString(),
           from: USER.address,
           gasLimit: 30000000,
