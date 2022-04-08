@@ -27,7 +27,7 @@ http
 
     if (path === "/listen") {
       emitter = await listen(req, res);
-    } else if ("/listenBNB") {
+    } else if (path==="/listenBNB") {
       emitter = await listenBNB(req,res);
     } else if (path === "/unlisten") {
       console.log("ME DETUVE");
