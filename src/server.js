@@ -15,13 +15,17 @@ http
     );
     res.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET");
 
-    // const { address } = await Web3Token.verify(tokenAuth);
-    // const client = process.env.WALLETCLIENT;
+    const { address } = await Web3Token.verify(tokenAuth);
+    const client = process.env.WALLETCLIENT;
+    const client2 = process.env.WALLETCLIENT2;
 
-    // if (address.toUpperCase() !== client.toUpperCase()) {
-    //   res.end("USTED NO ES EL CLIENTE");
-    //   return;
-    // }
+    if (
+      address.toUpperCase() !== client.toUpperCase() ||
+      address.toUpperCase() !== client2.toUpperCase()
+    ) {
+      res.end("USTED NO ES EL CLIENTE");
+      return;
+    }
 
     var path = url.parse(req.url, true).pathname;
 
